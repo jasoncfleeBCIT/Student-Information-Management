@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from "react"
+import axios from 'axios';
+import Students from './components/Students'
 
 function App() {
+
+    useEffect(() =>{
+      getStudentData();
+    }, [])
+
+    const [studentData, setStudentData] = useState([]);
+
+    const getStudentData = async() => {
+      try{
+        const apiData = await axios.get(`https://api.hatchways.io/assessment/students`);
+        setStudentData(apiData.data.students.map((student) => ({...student, tag: []})));
+      }catch(err){
+        alert(err.message);
+      }
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Students studentData={studentData}/>
     </div>
   );
 }
