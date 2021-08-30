@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import StudentDetailsGradeAverage from './StudentDetailsGradeAverage'
 import StudentDetailsGradeList from './StudentDetailsGradeList'
 import StudentDetailsTag from './StudentDetailsTag'
-import StudentTagInput from './StudentTagInput'
 
 const StudentDetails = ({studentEmail, studentCompany, studentSkill, studentGrade, studentGradeExpand, updatedStudentDataWithTag}) => {
 
@@ -16,13 +15,12 @@ const StudentDetails = ({studentEmail, studentCompany, studentSkill, studentGrad
             <StudentDetailsGradeAverage eachStudentGrade={studentGrade}/>
             {studentGradeExpand && <StudentDetailsGradeList eachStudentGrade={studentGrade}/>}
             <StudentDetailsTag updatedStudent={updatedStudentDataWithTag}/>
-            {/* <StudentTagInput updatedStudent={updatedStudentDataWithTag}/> */}
 
             <div className="studentAddTagContainer">
                 <input className="addTagBar" type='text' placeholder='Add a Tag' onChange={(event)=> {setTag(event.target.value);}} onKeyPress={(event) =>{
                         //trigger if enter key is hit in the tag input box
                         if(event.key === 'Enter'){
-
+                            
                             //prevent blank tag from being created
                             if(tag.trim() !== ""){
                                 updatedStudentDataWithTag.tag = [...updatedStudentDataWithTag.tag, tag]

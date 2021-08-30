@@ -1,16 +1,10 @@
-import React, {useState, useMemo} from 'react'
+import React from 'react'
 
 const StudentDetailsGradeAverage = ({eachStudentGrade}) => {
 
-    const [studentAverage, setStudentAverage] = useState(averageGrade(eachStudentGrade));
-
-    const cacheStudentAverage = useMemo(() => {
-        return averageGrade(eachStudentGrade)
-    }, [studentAverage])
-
     return (
         <div>
-            <p className='studentDetail'>Average: {cacheStudentAverage}%</p>
+            <p className='studentDetail'>Average: {averageGrade(eachStudentGrade)}%</p>
         </div>
     )
 }
