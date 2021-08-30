@@ -1,8 +1,8 @@
-# Frontend ReactJS with API Fetch Version 2 - Student Profiles
+# Student Information Management of Student Profiles using ReactJS
 
 Completed By: Jason Chi Fai Lee
 
-Built Front-End Focused Web Application by fetching API of Students and replicating design & functions based from Photos.\
+Built Front-End Focused Web Application by fetching API of Students.\
 Users are able to add Tags to the student and filter search students based on Tag and Full Name.
 
 https://frontend-apifetch.herokuapp.com/
