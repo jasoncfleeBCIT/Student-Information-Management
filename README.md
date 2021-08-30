@@ -5,9 +5,15 @@ Completed By: Jason Chi Fai Lee
 Built Front-End Focused Web Application by fetching API of Students and replicating design & functions based from Photos.\
 Users are able to add Tags to the student and filter search students based on Tag and Full Name.
 
-## Website
-
 https://frontend-apifetch.herokuapp.com/
+
+## Notes
+
+Fixed issue with tag from previous version where tags would be added after a delay.
+
+Fixed web application to be responsive
+
+Added more components for cleaner code
 
 ## Install command, run command and port
 
