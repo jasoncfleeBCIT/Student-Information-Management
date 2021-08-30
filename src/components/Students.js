@@ -15,9 +15,13 @@ const Students = ({studentData}) => {
 
                 if(searchName === "" && searchTag === ""){
                     return val;
+                }else if(val.firstName.toLowerCase().includes(searchName.toLowerCase()) && searchTag === ""){
+                    return val;
                 }else if(fullName(val.firstName, val.lastName).toLowerCase().includes(searchName.toLowerCase()) && searchTag === ""){
                     return val;
-                }else if(searchTag === "" && tagMatch(val.tag, searchTag) === true){
+                }else if(searchName === "" && tagMatch(val.tag, searchTag) === true){
+                    return val;
+                }else if (val.firstName.toLowerCase().includes(searchName.toLowerCase()) && tagMatch(val.tag, searchTag) === true){
                     return val;
                 }else if(fullName(val.firstName, val.lastName).toLowerCase().includes(searchName.toLowerCase()) && tagMatch(val.tag, searchTag) === true){
                     return val;
