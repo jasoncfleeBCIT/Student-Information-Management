@@ -8,11 +8,8 @@ const Students = ({studentData}) => {
 
     return (
         <div className="studentContainer">
-
             <input className="searchBar" type='text' placeholder="Search by name" onChange={(event) =>{setSearchName(event.target.value);}}/>
-
             <input className="searchBar searchTagBar" type='text' placeholder="Search by tag" onChange={(event) =>{setSearchTag(event.target.value);}}/>
-            
 
             {studentData.filter((val)=>{
 
