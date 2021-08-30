@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="container">
-      <Students studentData={studentData}/>
+      <Students studentData={studentData} setStudentData={setStudentData}/>
     </div>
   );
 }

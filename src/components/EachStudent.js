@@ -22,8 +22,10 @@ const EachStudent = ({eachStudent}) => {
                     studentCompany={eachStudent.company}
                     studentSkill={eachStudent.skill}
                     studentGrade={eachStudent.grades}
-                    studentGradeExpand={show}/>
+                    studentGradeExpand={show}
+                    updatedStudentDataWithTag={eachStudent}/>
             </div>
+
             <div className="buttonFarRight">
                 <button className='buttonExpand' onClick={ () => setShow(!show)}>{show? <FaMinus/> : <FaPlus/>}</button>
             </div>

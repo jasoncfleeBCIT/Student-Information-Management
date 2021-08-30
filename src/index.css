@@ -5,7 +5,8 @@ body{
   }
 
 #bodyContainer{
-    background-color: rgb(206, 206, 192)
+    background-color: rgb(206, 206, 192);
+    overflow-y:hidden;
 }
 
 .container{
@@ -82,7 +83,7 @@ body{
 }
 
 .studentContainer{
-    padding-top:60px;
+    padding-top:110px;
 }
 
 .searchBar{
@@ -97,7 +98,12 @@ body{
     transition: 0.1s;
     font-family: 'Raleway', sans-serif;
     position: fixed;
-    margin-top:-70px;
+    margin-top:-120px;
+  }
+
+  .searchTagBar{
+    margin-top: -56px;
+    margin-bottom: 10px;
   }
 
 
@@ -127,7 +133,44 @@ body{
     margin-bottom: 0px;
     padding-left:20px;
     font-size: 20px;
+  }
 
+  .searchBar:focus{
+    border-bottom: 2px solid black;
+  }
+
+  .studentAddTagContainer{
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom:30px;
+  }
+
+  .addTagBar{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid lightgray;
+    width: 50%;
+    height: 50px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .studentTag{
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin: 3px;
+    font-weight: 400;
+    font-size: 20px;
+    display:inline-block;
+  }
+
+  .studentTagContainer{
+    margin-left: 32px;
   }
 @media (max-width: 800px) {
     .student {
