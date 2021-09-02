@@ -10,6 +10,7 @@ const StudentTagInput = ({updatedStudent , theTag, setTheTag}) => {
 
                             //prevent blank tag from being created
                             if(theTag.trim() !== ""){
+                                //add tag to student
                                 updatedStudent.tag = [...updatedStudent.tag, theTag]
                             }
 
@@ -17,6 +18,7 @@ const StudentTagInput = ({updatedStudent , theTag, setTheTag}) => {
                             for(let position = 0; position < document.getElementsByClassName('addTagBar').length; position++){
                                 document.getElementsByClassName('addTagBar')[position].value = '';
                             }
+                            //clear the tag state variable from incoming prop
                             setTheTag("");
                         }
                     }}/>

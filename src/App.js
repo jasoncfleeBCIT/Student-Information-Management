@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 import axios from 'axios';
-import Students from './components/Students'
+import Students from './components/mainContainer/Students'
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="container">
-      <Students studentData={studentData} setStudentData={setStudentData}/>
+      <Students studentData={studentData}/>
     </div>
   );
 }

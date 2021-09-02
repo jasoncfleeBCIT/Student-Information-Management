@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import StudentDetailsGradeAverage from './StudentDetailsGradeAverage'
-import StudentDetailsGradeList from './StudentDetailsGradeList'
-import StudentDetailsTag from './StudentDetailsTag'
-import StudentTagInput from './StudentTagInput'
+import StudentDetailsGradeAverage from '../studentDetails/StudentDetailsGradeAverage'
+import StudentDetailsGradeList from '../studentDetails/StudentDetailsGradeList'
+import StudentDetailsTag from '../studentDetails//StudentDetailsTag'
+import StudentTagInput from '../studentDetails//StudentTagInput'
 
 const StudentDetails = ({studentEmail, studentCompany, studentSkill, studentGrade, studentGradeExpand, updatedStudentDataWithTag}) => {
 

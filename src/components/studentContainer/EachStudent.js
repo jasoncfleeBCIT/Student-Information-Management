@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import StudentPicture from './StudentPicture'
-import StudentName from './StudentName'
-import StudentDetails from './StudentDetails'
+import StudentPicture from '../studentDetails/StudentPicture'
+import StudentName from '../studentDetails/StudentName'
+import StudentDetails from '../studentDetailsContainer/StudentDetails'
 import { FaPlus } from 'react-icons/fa';
 import { FaMinus } from 'react-icons/fa';
 

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import EachStudent from './EachStudent'
+import EachStudent from '../studentContainer/EachStudent'
 
 const Students = ({studentData}) => {
 
@@ -13,18 +13,19 @@ const Students = ({studentData}) => {
 
             {studentData.filter((val)=>{
 
+                //Return all students when search and tag search is null
                 if(searchName === "" && searchTag === ""){
                     return val;
-                }else if(val.firstName.toLowerCase().includes(searchName.toLowerCase()) && searchTag === ""){
-                    return val;
+                //Return name student
                 }else if(fullName(val.firstName, val.lastName).toLowerCase().includes(searchName.toLowerCase()) && searchTag === ""){
                     return val;
+                //Return tag student
                 }else if(searchName === "" && tagMatch(val.tag, searchTag) === true){
                     return val;
-                }else if (val.firstName.toLowerCase().includes(searchName.toLowerCase()) && tagMatch(val.tag, searchTag) === true){
-                    return val;
+                //Return student with name and tag
                 }else if(fullName(val.firstName, val.lastName).toLowerCase().includes(searchName.toLowerCase()) && tagMatch(val.tag, searchTag) === true){
                     return val;
+                //Return no student
                 }else{
                     return false;
                 }
@@ -38,14 +39,14 @@ const Students = ({studentData}) => {
 
 export default Students
 
-// this function returns the full name of the student
+//This function returns the full name of the student
 const fullName = (firstName, lastName) =>{
     let fullName = "";
     return fullName + firstName + " " + lastName;
 }
 
 //This function goes through the array of tags for a student and returns true if searched tag is exist in the student
-function tagMatch(tag, searchTag){
+const tagMatch = (tag, searchTag) =>{
     let validCheck = false;
     
     for(let position = 0; position < tag.length; position++){
