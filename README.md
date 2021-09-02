@@ -7,7 +7,7 @@ Users are able to add Tags to the student and filter search students based on Ta
 
 https://frontend-apifetch.herokuapp.com/
 
-## Notes
+## Version 2 Updates
 
 Fixed issue with tag from previous version where tags would be added after a delay.
 
